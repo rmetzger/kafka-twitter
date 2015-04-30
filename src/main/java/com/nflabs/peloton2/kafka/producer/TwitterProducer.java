@@ -80,7 +80,7 @@ public class TwitterProducer {
 			public void onScrubGeo(long userId, long upToStatusId) {}
 
 			public void onException(Exception ex) {
-				logger.info("Shutting down Twitter sample stream...");
+				logger.info("Error", ex);
 				twitterStream.shutdown();
 			}
 
